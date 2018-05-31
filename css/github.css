@@ -30,14 +30,28 @@
 .githublogo{
     float: left;
     margin: 0px 15px 0 0px;
+    width: 5%;
+    height: 5%;
 } /*logo displays on left*/
 
 
 
-h2{
-    float:right;
+h4{
+    float:left;
     position: relative;
     clear: left;
-    margin: 0px 85% 0 0px;
+    position: relative;
+    margin-left: auto;
 }
 
+table{
+    table-layout: fixed;
+    tab-size: 4;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+td{
+    word-wrap:break-word
+}
