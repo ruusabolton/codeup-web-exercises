@@ -5,28 +5,38 @@
     <title>Register With Us</title>
 </head>
 <body>
-    <form method="POST" action="https://webhook.site/35746fa4-21e9-4da3-bb75-ced80d583420">
-        <input type="email" placeholder="Enter a valid Email">
-        <input type="password" placeholder="Enter your password">
+        <Form method="POST" action="https://webhook.site/7124534c-fa2e-4755-81c2-46c70e8bb86b">
+
+        <label for="email">Email</label>
+            <input id="email" name="email" type="text" placeholder="abc@email.com">
+
+        <label for="Password">Password</label>
+            <input id="password" name="password" type="password">
+
+        <input type="submit" value="Create User">
         <p>
-            <textarea cols="50" rows="10" id="bio" name="bio">Tell us about yourself.</textarea>
+            <label for="bio"></label>
+            <textarea id="bio" cols="50" rows="10"  name="bio" placeholder="Tell us about yourself"></textarea>
         </p>
-        <p>
-            <h2>How did you hear about us?</h2>
-            <label for="answer">
-                <input type="checkbox" name="answer" value="true"> Billboard <br>
-                <input type="checkbox" name="answer" value="true"> Radio Advertisement <br>
-                <input type="checkbox" name="answer" value="true"> Internet Advertisement
-                <select id="browser" name="browser[]">
-                    <option name="browser1" value="Chrome">Chrome</option>
-                    <option name="browser2" value="Explorer">Internet Explorer</option>
-                    <option name="browser3" value="Edge">Edge</option>
-                    <option name="browser4" value="Firefox">Firefox</option>
-                </select> <br>
-                <input type="checkbox" name="answer" value="true"> Other <textarea cols="10" rows="1" id="bio" name="bio">Explain</textarea>
-            </label>
-        </p>
-        <input type="submit">
+
+            <label><h2>How did you hear about us?</h2></label>
+
+                <input type="checkbox" name="billboard" value="Billboard"> Billboard <br>
+                <input  type="checkbox" name="radio_advertisement" value="Radio_advertisement"> Radio Advertisement <br>
+                <input  type="checkbox" name="internet_advertisement" value="Internet_advertisement"> Internet Advertisement
+
+
+                <select id="browser" name="browser">
+                    <option class="browse"  value="Chrome">Chrome</option>
+                    <option class="browse"  value="Explorer">Internet Explorer</option>
+                    <option class="browse" value="Edge">Edge</option>
+                    <option class="browse"  value="Firefox">Firefox</option>
+                </select>
+            <br>
+            <input type="checkbox" name="other" value="Other"> Other
+
+            <br>
+        <button>Send</button>
     </form>
 </body>
 </html>
