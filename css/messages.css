@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+
+.message_message-info{
+
+    margin-top: 10px;
+    border: 2px solid gray(light);
+    border-radius:  5px;
+    background: #98b4e2;
+    padding: 20px;
+    width: 90%;
+    height: 10px;
+    color: #364b70;
+
+
+}
+
+.message_message-success{
+
+    border: 2px solid gray(light);
+    border-radius:  5px;
+    background: #b2f7ba;
+    padding: 20px;
+    width: 90%;
+    height: 10px;
+    margin-top: 10px;
+    color: #557743;
+
+}
+
+.message_message-warning{
+    border: 2px solid gray(light);
+    border-radius:  5px;
+    background: #eff2ab;
+    padding: 20px;
+    width: 90%;
+    height: 10px;
+    margin-top: 10px;
+    color: #a5a365;
+}
+
+.message_message-error{
+    border: 2px solid gray(light);
+    border-radius:  5px;
+    background: #f4abc3;
+    padding: 20px;
+    width: 90%;
+    height: 10px;
+    margin-top: 10px;
+    color: #9e4f83;
+}
