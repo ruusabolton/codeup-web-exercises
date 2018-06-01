@@ -15,19 +15,22 @@
 
             /* change color of headers & underline */
             h1,h2{
-                color:yellow;
+                color:rebeccapurple;
                 text-decoration: underline;
                 }
-
+            html {
+                background-color: #dddddd; /*light grey*/
+            }
             /* change page background color & font; add background image */
 
-            body {  background-color: #dddddd; /*light grey*/
-                    font-family: AppleMyungjo;
-                    background-image: url("./img/sky.png");
-                    width: 1050px;
-                    height: 700px;
-                    background-size: 100em ;
-                    color: white;
+            body, html {
+                font-family: AppleMyungjo;
+                background-image: url("./img/mybg.png");
+                background-size: cover;
+                width: 95em;
+                height: 99%;
+                border: 2px solid;
+
                 }
 
             /* change appearance of bullets */
@@ -36,12 +39,10 @@
                 }
 
             /* Change padding and font size */
-            td,tr{
-                padding-top: 1em;
-                padding-right: 2em;
-                padding-bottom: 1em;
-                padding-left: 2em;
+            table,td,tr{
+                padding: 8px;
                 font-size: large;
+                border: 2px white;
                 }
 
             /* unvisited link (:link) */
@@ -110,7 +111,7 @@
     <div>
         <h2>Our Product</h2>
 
-        <table>
+        <table border="2">
             <tr>
                 <th>Plan</th>
                 <th>Price</th>
