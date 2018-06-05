@@ -1,17 +1,19 @@
-@media screen and (min-width:1200px) {
-    body {
-        font-family: Verdana;
-    }
+body {
+    font-family: Verdana;
+}
 
-    img {
-        margin: 0 auto;
-        overflow: hidden;
-        clear: both;
-        padding: 0;
-        display: block;
-        height: 24.0625em;
-        width: 100%;
-    }
+img {
+    margin: 0 auto;
+    overflow: hidden;
+    clear: both;
+    padding: 0;
+    display: block;
+    height: 24.0625em;
+    width: 100%;
+}
+
+@media screen and (min-width:1200px) {
+
 
     .alert-info {
         display: none;
