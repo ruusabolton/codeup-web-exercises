@@ -1,3 +1,4 @@
+
 body {
     font-family: "Arial Narrow";
 }
@@ -17,7 +18,8 @@ h1 {
     font-family: Verdana;
 }
 
-.fancy-header {
-    background-color: lightskyblue;
-    color: cadetblue;
+
+.badge {
+    background-color: gray;
+    color: white;
 }

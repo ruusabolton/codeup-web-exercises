@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Pizza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/3.0.1/css/primer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Pizza world</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse  navbar-collapse" id="navbarNavAltMarkup">
+                <div class=" navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Order online <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Menu</a>
+                    <form class="form-inline ">
+                        <input class=" form-control input-sm mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+                <span class="navbar-text mr-sm-2">
+                    <ion-icon name="person"></ion-icon>
+                </span>
+                <button type="button" class="btn btn-link" style="color:black">Sign up</button>
+            </form>
+        </nav>
+
+        <div >
+            <div class="jumbotron jumbotron-fluid" >
+                <h1 class="display-4">Welcome to Pizza World!</h1>
+            </div>
+        </div>
+        <h2> Build your own pizza!</h2>
+        <hr>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                    <span class="badge badge-primary badge-pill">1</span>Size and crust</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                    <span class="badge badge-primary badge-pill">2</span>Cheese and Sauce</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                    <span class="badge badge-primary badge-pill">3</span>Toppings</a>
+            </li>
+        </ul>
+
+    <container>
+        <div  class="card text-left ">
+
+
+            <div class="card-header" style="background-color: lightblue;color: cadetblue">
+                Choose size and crust
+            </div>
+            <div class="card text-left">
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-header"> Hand tossed</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Garlic-seasoned crust with a rich , buttery taste.</li>
+                            <li class="list-group-item"  style="background-color: lightblue; color: cadetblue">
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Small(10)">
+                                    Small(10")
+                                </div>
+                            </li>
+                            <li class="list-group-item" style="background-color: lightblue; color: cadetblue">
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="Medium(12)">
+                                    Medium(12")
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <br>
+           <!-- <div class="card text-left">
+                <div class="card-body">-->
+                    <!--<div class="card text-left">-->
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-header"> Crispy Thin</div>
+                    <div class="card-text">
+                        <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                            <li class="list-group-item" style="background-color: lightblue; color: cadetblue">
+                                <div class="form-check" style="color: cadetblue">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    Medium(12")
+                                </div>
+                             </li>
+                            <li class="list-group-item" style="background-color: lightblue; color: cadetblue">
+                                <div class="form-check" style="color: cadetblue">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                Large(14")
+                                </div>
+                            </li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+
+            <div class="card-footer  text-right">
+                <button type="button" class="btn btn-primary" > Next</button>
+            </div>
+            </div>
+        </div>
+    </container>
+
+    <br>
+    <container>
+
+        <div class="card text-left">
+            <div class="card-header" style="background-color: lightblue; color: cadetblue" >
+                Choose Cheese and Sauce
+            </div>
+        <div class="card text-left">
+            <div class="card-body" >
+                <div class="card">
+                    <div class="card-header">
+                    Cheese
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" style="background-color: lightblue; color: cadetblue">
+                        How much?
+                        <select class="custom-select" >
+                            <option>Light</option>
+                            <option>Normal</option>
+                            <option>Extra</option>
+                            <option>Double</option>
+                        </select>
+                    </li>
+                </ul>
+                </div>
+            </div>
+
+            <div class="card-body" >
+                <div class="card">
+                <div class="card-header">
+                    Sauce
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" style="background-color: lightblue; color: cadetblue">
+                        What Type?
+                        <select class="custom-select" >
+                            <option>Tomato sauce</option>
+                            <option>Marinara sauce</option>
+                            <option>BBQ Sauce</option>
+                            <option>Alfredo Sauce</option>
+                        </select>
+
+                    </li>
+                    <li class="list-group-item" style="background-color: lightblue; color: cadetblue" >
+                        How much?
+                        <select class="custom-select" >
+                            <option>Light</option>
+                            <option>Normal</option>
+                            <option>Extra</option>
+                        </select>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+            <div class="card-footer text-muted text-right">
+
+                <div class="btn-group" role="group" aria-label="prevnxt">
+                    <span>
+                        <button type="button" class="btn btn-primary" value="Previous step">Previous step</button>
+                        <button type="button" class="btn btn-primary" value="Next step">Next step</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </container>
+    <br>
+
+    <container>
+
+        <div  class="card text-left ">
+            <div class="card-header" style="background-color: lightblue;color: cadetblue">
+                Choose toppings
+            </div>
+            <div class="card text-left">
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-header"> Choose meats</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="background-color: lightblue; color: cadetblue">
+                                <div class="form-check" style="color: cadetblue">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    Beef
+                                </div>
+                            </li>
+                            <li class="list-group-item" style="background-color: lightblue; color: cadetblue">
+                                <div class="form-check" style="color: cadetblue">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    Ham
+                                </div>
+                            </li>
+                            <li class="list-group-item" style="background-color: lightblue; color: cadetblue">
+                                <div class="form-check" style="color: cadetblue">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    Philly Steak
+                                </div>
+                            </li>
+                            <li class="list-group-item" style="background-color: lightblue; color: cadetblue">
+                                <div class="form-check" style="color: cadetblue">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    Bacon
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+                <!-- <div class="card text-left">
+                     <div class="card-body">-->
+                <!--<div class="card text-left">-->
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-header"> Choose non-meats</div>
+                        <div class="card-text">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item" style="background-color: lightblue; color: cadetblue">
+                                    <div class="form-check" style="color: cadetblue">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        Green Peppers
+                                    </div>
+                                </li>
+                                <li class="list-group-item" style="background-color: lightblue; color: cadetblue">
+                                    <div class="form-check" style="color: cadetblue">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        Mushrooms
+                                    </div>
+                                </li>
+                                <li class="list-group-item" style="background-color: lightblue; color: cadetblue">
+                                    <div class="form-check" style="color: cadetblue">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        Onions
+                                    </div>
+                                </li>
+                                <li class="list-group-item" style="background-color: lightblue; color: cadetblue">
+                                    <div class="form-check" style="color: cadetblue">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        Jalapeno Peppers
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-right card-footer text-muted well">
+                    <button type="button" class="btn btn-primary btn-sm btn-right">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </container>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
+</div>
+</body>
+</html>
