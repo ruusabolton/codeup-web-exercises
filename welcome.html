@@ -64,6 +64,20 @@
             a:active {
                 color:green;
             }
+
+            .zoom {
+                padding: 50px;
+
+                transition: transform .1s; /* Animation */
+                width: 25em;
+                height: 25em;
+                margin: 0 auto;
+
+
+            }
+            .zoom:hover{
+                transform: scale(1.5);
+            }
         </style>
 
 
@@ -100,11 +114,11 @@
 
         <h2>Company Vision</h2>
 
-        <img src="./img/wave.png" style="width:45%;"/>
-        <img src="./img/sunset.jpeg" style="width:45%;"/>
+       <div class="zoom"> <img src="./img/wave.png" style="width:45%;"/></div>
+        <div class="zoom"><img src="./img/sunset.jpeg" style="width:45%;"/></div>
 
-        <img src="./img/balloons.png" style="width:45%;"/>
-        <img src="./img/leaf.png" style="width:45%;"/>
+        <div class="zoom"><img src="./img/balloons.png" style="width:45%;"/></div>
+        <div class="zoom"><img src="./img/leaf.png" style="width:45%;"/></div>
 
     </div>
 

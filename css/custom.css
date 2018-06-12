@@ -1,6 +1,9 @@
 
 body {
     font-family: "Arial Narrow";
+    margin: 0;
+    padding:0;
+
 }
 
 
@@ -22,4 +25,7 @@ h1 {
 .badge {
     background-color: gray;
     color: white;
+
 }
+
+
