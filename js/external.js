@@ -23,7 +23,7 @@ totalRentalCost =
     * parseInt(rentalPerDayDollars);
 
 userInput = prompt('How much will you pay for all those movies?');
-if (userInput == 27){
+if (userInput === 27){
     alert('You\'re right!!');}
 else {
     alert('You guessed wrong; $27 is what you will pay.');}
@@ -75,7 +75,7 @@ alert('Great, contact your advisor for your next steps!!');}
 
 
 var numberOfItemsForDiscount;
-var numberOfItems; // number
+var numberOfItems = 2; // number
 var offerIsNotExpired; // boolean
 var isPremiumMember; // boolean
 var Buyer;
@@ -83,7 +83,7 @@ var Buyer;
 var productDiscountApplied = isPremiumMember || (numberOfItems >= numberOfItemsForDiscount && offerIsNotExpired);
 
 Buyer = prompt('How many items did you buy');
-if (numberOfItems >= 2){
+if (numberOfItems ==>2){
     alert('Great you may qualify for a Discount');}
 else { alert('Sorry, no discount for you.');}
 
