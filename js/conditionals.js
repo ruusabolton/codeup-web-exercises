@@ -16,75 +16,75 @@
 
 
 
-// if (confirm("Do you want to enter a number?")){
-//     var number = prompt('Enter your number');
-//
-//     if (!isNaN(number)){
-//         if (number % 2 === 0) {
-//             alert('number is even');
-//             alert(sum = (parseInt(number) + 100));
-//             }
-//             else {
-//             alert('number is odd');
-//             alert(sum = (parseInt(number) + 100));
-//             }
-//         if (number > 0) {
-//             alert('Number is positive.');
-//             }
-//             else {
-//             alert('Number is negative.');
-//             }
-//         }
-//
-//     else {
-//         alert('Please enter a valid number.');
-//         }
-//
-//     }
-//
-//
-// else {
-//     alert('Thanks you for playing.');
-//     }
+if (confirm("Do you want to enter a number?")){
+    var number = prompt('Enter your number');
+
+    if (!isNaN(number)){
+        if (number % 2 === 0) {
+            alert('number is even');
+            alert(sum = (parseInt(number) + 100));
+            }
+            else {
+            alert('number is odd');
+            alert(sum = (parseInt(number) + 100));
+            }
+        if (number > 0) {
+            alert('Number is positive.');
+            }
+            else {
+            alert('Number is negative.');
+            }
+        }
+
+    else {
+        alert('Please enter a valid number.');
+        }
+
+    }
+
+
+else {
+    alert('Thanks you for playing.');
+    }
 
     /* REFACTOR WITH FUNCTION */
     //########################################################################## */
 
-// function getNumber (number){
-//
-//     if (confirm("Do you want to enter a number?")){
-//         number = prompt('Enter your number');
-//
-//         if (!isNaN(number)){
-//             if (number % 2 === 0) {
-//                 alert('number is even');
-//                 alert(sum = (parseInt(number) + 100));
-//             }
-//             else {
-//                 alert('number is odd');
-//                 alert(sum = (parseInt(number) + 100));
-//             }
-//             if (number > 0) {
-//                 alert('Number is positive.');
-//             }
-//             else {
-//                 alert('Number is negative.');
-//             }
-//         }
-//
-//         else {
-//             alert('Please enter a valid number.');
-//         }
-//
-//     }
-//
-//
-//     else {
-//         alert('Thanks you for playing.');
-//     }
-// }
-//
-// getNumber();
+function getNumber (number){
+
+    if (confirm("Do you want to enter a number?")){
+        number = prompt('Enter your number');
+
+        if (!isNaN(number)){
+            if (number % 2 === 0) {
+                alert('number is even');
+                alert(sum = (parseInt(number) + 100));
+            }
+            else {
+                alert('number is odd');
+                alert(sum = (parseInt(number) + 100));
+            }
+            if (number > 0) {
+                alert('Number is positive.');
+            }
+            else {
+                alert('Number is negative.');
+            }
+        }
+
+        else {
+            alert('Please enter a valid number.');
+        }
+
+    }
+
+
+    else {
+        alert('Thanks you for playing.');
+    }
+}
+
+getNumber();
 
 
     /**
@@ -148,11 +148,11 @@ function analyzeColor (colors){
     }
 
 }
-//
-//  console.log(analyzeColor('orange'));
-//  console.log(analyzeColor('blue'));
-//  console.log(analyzeColor('violet'));
-//  console.log(analyzeColor(randomColor));
+
+ console.log(analyzeColor('orange'));
+ console.log(analyzeColor('blue'));
+ console.log(analyzeColor('violet'));
+ console.log(analyzeColor(randomColor));
     /**
      * TODO:
      * Refactor your above function to use a switch-case statement
