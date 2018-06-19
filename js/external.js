@@ -83,7 +83,7 @@ var Buyer;
 var productDiscountApplied = isPremiumMember || (numberOfItems >= numberOfItemsForDiscount && offerIsNotExpired);
 
 Buyer = prompt('How many items did you buy');
-if (numberOfItems ==>2){
+if (numberOfItems =>2){
     alert('Great you may qualify for a Discount');}
 else { alert('Sorry, no discount for you.');}
 

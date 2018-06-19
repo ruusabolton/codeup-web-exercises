@@ -41,7 +41,8 @@
      * Refactor your above code to use a `forEach` loop
      */
     names.forEach(function(indivname){
-        console.log('Next time I will invite ' + indivname + '.');})
+        console.log('Next time I will invite ' + indivname + '.')
+        });
 
     /**
      * TODO:
