@@ -45,6 +45,13 @@
     console.log("Sorting the planets array.");
     planets.sort();
     console.log(planets);
+
+function baked(arr) {
+    var planetSlice = arr.slice(arr.length -3);
+    console.log(planetSlice);
+}
+console.log(baked(planets));
+
 })();
 
 
