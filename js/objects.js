@@ -112,14 +112,29 @@ person.sayHello();
      */
 
     for (var i = 0; i <books.length; i++){
-        console.log("Book #" + (i+1))
+        console.log("Book #" + (i+1));
         console.log("Title: " + books[i].title);
-        console.log("Author: " + books[i].author.firstName + " "+ books[i].author.lasestName)
-        cibsike.log("---")//dividing book info.
+        console.log("Author: " + books[i].author.firstName + " "+ books[i].author.lasestName);
+        console.log("---");//dividing book info.
         console.log("...");
 
     }
 
+    //Other possible method for adding books;
+
+    books.forEach(function(addedBook, i){
+//function callback has 3 parameters (element index, array). addedBook is the element, i = index;
+// No need to define i. You can omit any parameter that you won't use. In casu, we are using only
+//element and index.
+
+
+        console.log("Book #" + (i+1));
+        console.log("Title: " + books[i].title);
+        console.log("Author: " + books[i].author.firstName + " "+ books[i].author.lasestName);
+        console.log("---");//dividing book info.
+        console.log("...");
+
+    });
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author

@@ -15,7 +15,7 @@ function showMultiplicationTable()
 }
 showMultiplicationTable();
 
-OR this way below.
+//OR this way below.
 
 var input = prompt('Give us a number, Deary!');
 for (var i = 1; i <=10; i++){
