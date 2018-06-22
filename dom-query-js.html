@@ -26,6 +26,7 @@
 </p>
 
 <button id="btn1" >Making Java Cool!</button>
+
 <button id="btn2">Making subHeader BLUE!</button>
 <button id="btn3">Changing every other list items to BLUE & GREY!</button>
 <button id="btn4">Accomplishing the Mission!</button>
@@ -110,7 +111,102 @@
      var mainHeader = document.getElementById('main-header');
      mainHeader.innerHTML = "JavaScript is Cool ";
      // console.log(mainHeader);
+     setTimeout(function(){
+     window.location.reload(1);
+        }, 5000);
  }
+ firstBtn.addEventListener('click', coolJava);
+ //document.addEventListener('click', coolJava);
+
+
+
+        // var remover = function () {
+        //     // remove event listener from btn1
+        //     firstBtn.removeEventListener('click', coolJava);
+        //     console.log('Event listener removed.');
+        // };
+
+
+
+var secondBtn = document.getElementById('btn2');
+function subHeadBlue(){
+    var subHeader = document.getElementById('sub-header');
+    subHeader.style.color = "blue";
+    setTimeout(function(){
+        window.location.reload(1);
+    }, 5000);
+}
+secondBtn.addEventListener('click', subHeadBlue);
+//document.addEventListener('click', subHeadBlue);
+
+        // var remover = function () {
+        //     // remove event listener from btn1
+        //     secondBtn.removeEventListener('click', subHeadBlue);
+        //     console.log('Event listener removed.');
+        // };
+
+
+var thirdBtn = document.getElementById('btn3');
+function listItemChanges(){
+    var listItems = document.getElementsByTagName('li');//ID & defines li-items' list, and how to get to them.
+    console.log(listItems); //will return a collection of all nodes that are <li>.
+
+
+    // TODO: Set text color on every other list item to grey
+
+    for (var i = 0; i<listItems.length; i+=2){
+        listItems[i].style.color = 'grey';
+        console.log(listItems[i]);
+    }
+    // TODO: Set text color of li with dbid = 1 to blue
+
+    for (var i=0; i<listItems.length; i+=1 ){
+    if (listItems[i].getAttribute('data-dbid') =="1"){
+        listItems[i].style.color = "blue";}
+        else if (i % 2 === 0){
+        listItems[i].style.color = "grey";
+        setTimeout(function(){
+            window.location.reload(1);
+        }, 5000);
+    }
+    }
+}
+thirdBtn.addEventListener('click', listItemChanges);
+//document.addEventListener('click', listItemChanges);
+
+        // var remover = function () {
+        //     // remove event listener from btn1
+        //     thirdBtn.removeEventListener('click', listItemChanges);
+        //     console.log('Event listener removed.');
+        // };
+
+
+var fourthBtn = document.getElementById('btn4');
+function misSion(){
+
+    // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+    var subParagraphs = document.getElementsByClassName('sub-paragraph');
+    for (var i = 0; i<subParagraphs.length; i++){
+        console.log(subParagraphs[i]);
+    }
+
+    // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+    subParagraphs[0].innerHTML = "Mission Accomplished!";
+
+    setTimeout(function(){
+        window.location.reload(1);
+    }, 5000);
+}
+fourthBtn.addEventListener('click', misSion);
+
+//document.addEventListener('click', misSion);
+
+
+        // var remover = function () {
+        //     // remove event listener from btn1
+        //     fourthBtn.removeEventListener('click', misSion);
+        //     console.log('Event listener removed.');
+        // };
 
 
 
