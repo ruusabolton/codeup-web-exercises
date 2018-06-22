@@ -25,50 +25,97 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="btn1" >Making Java Cool!</button>
+<button id="btn2">Making subHeader BLUE!</button>
+<button id="btn3">Changing every other list items to BLUE & GREY!</button>
+<button id="btn4">Accomplishing the Mission!</button>
+
 <script>
+
     (function() {
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById('main-header');
-        console.log(mainHeader);
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool ";
-        console.log(mainHeader);
+        // // TODO: Uncomment next line and get the main header element by id
+        // var mainHeader = document.getElementById('main-header');
+        // console.log(mainHeader);
+        // // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        // mainHeader.innerHTML = "JavaScript is Cool ";
+        // console.log(mainHeader);
+        //
+        // // TODO: Uncomment the next line and get the sub header element by id
+        // var subHeader = document.getElementById('sub-header');
+        //
+        // // TODO: Set the text color of subHeader to blue
+        // subHeader.style.color = 'blue';
+        //
+        // // TODO: Uncomment the next line and get all list items
+        // var listItems = document.getElementsByTagName('li');//ID & defines li-items' list, and how to get to them.
+        // console.log(listItems); //will return a collection of all nodes that are <li>.
+        //
+        // // for (var i = 0; i<listItems.length; i++){
+        // //     console.log(listItems[i]);
+        // // } //will return a listing of all li-tags with their contents.
+        //
+        // // TODO: Set text color on every other list item to grey
+        //
+        // for (var i = 0; i<listItems.length; i+=2){
+        //     listItems[i].style.color = 'grey';
+        //     console.log(listItems[i]);
+        // }
+        // // TODO: Set text color of li with dbid = 1 to blue
+        //
+        // //listItems[0].style.color = 'blue';//This option is tied to the ist position and not the attribute of dbid=1!!
+        //
+        // //Best way to color the item: if you move the item to a different position in the list-collection, it will remain
+        // // blue because the coloring is not tied to it position like the first option.
+        //
+        // for (var i=0; i<listItems.length; i+=1 ){
+        // if (listItems[i].getAttribute('data-dbid') =="1"){
+        //     listItems[i].style.color = "blue";}
+        //     else if (i % 2 === 0){
+        //     listItems[i].style.color = "grey";
+        // }//if position of i is an even number - color grey. Start counting from 0!!!, Dus, 0,2,4 positions numbered 1,3,5
+        // //Item 1 will remain blue because it got that color based off of id which takes precedent.
+        // }
+        //
+        // // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        // var subParagraphs = document.getElementsByClassName('sub-paragraph');
+        // for (var i = 0; i<subParagraphs.length; i++){
+        //     console.log(subParagraphs[i]);
+        // }
+        //
+        // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        // subParagraphs[0].innerHTML = "Mission Accomplished!";
+        // console.log(subParagraphs);
 
-        // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById('sub-header');
+        // var listener = function (event) {
+        //     alert('You clicked the button!');
+        // }
+        //
+        // // add event listener to btn1
+        // var btn1 = document.getElementById('btn1');
+        // btn1.addEventListener('click', listener, false);
+        //
+        // var remover = function (event) {
+        //     // remove event listener from btn1
+        //     btn1.removeEventListener('click', remover, false);
+        //     console.log('Event listener removed.');
+        // }
+        //
+        // // add event listener to btn2
+        // var btn2 = document.getElementById('btn2');
+        // btn2.addEventListener('click', remover, false);
 
-        // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = 'blue';
-
-        // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName('li');//ID & defines li-items' list, and how to get to them.
-        for (var i = 0; i<listItems.length; i++){
-            console.log(listItems[i]);
-        }
-
-        // TODO: Set text color on every other list item to grey
-
-        for (var i = 0; i<listItems.length; i+=2){
-            listItems[i].style.color = 'grey';
-            console.log(listItems[i]);
-        }
-        // TODO: Set text color of li with dbid = 1 to blue
-
-        listItems[0].style.color = 'blue';
+ var firstBtn = document.getElementById('btn1');
+ function coolJava(){
+     var mainHeader = document.getElementById('main-header');
+     mainHeader.innerHTML = "JavaScript is Cool ";
+     // console.log(mainHeader);
+ }
 
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName('sub-paragraph');
-        for (var i = 0; i<subParagraphs.length; i++){
-            console.log(subParagraphs[i]);
-        }
-
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!";
-        console.log(subParagraphs);
 
     })();
+
 </script>
 </body>
 </html>
