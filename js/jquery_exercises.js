@@ -1,37 +1,26 @@
 $(document).ready(function() {
-    alert( 'The DOM has finished loading!' );
 
-
-    $(function () {
-        $("#playButton").click(function () {
-            $("#playOutput").text($("#playInput").val())});
-
-
-
-
-        $(".importante").mouseover(function () {
-
-            $('.importante').css('background-color', 'pink');});
-
-
-
-
-
-
-
-
-        $(".codeup").mouseover(function () {
-
-            $('.codeup').css('background-color', 'lightgrey');});
-
-
+    $('h1').click(function (e) {
+        $(this).css('background-color', 'red');
     });
 
-    $(".codeup").mouseover(function () {
+    $('p').dblclick(function (e) {
+        $(this).css('font-size', '18px');
+    });
+
+    // $('li').hover(function() {
+    //
+    //     $(this).css('color', 'green');
+    //
+    // });
+    //
+    // $(this).css('color', '');
 
 
-        $(alert( '... loading Animals List!!' ));
-
+    $('.unselected').mouseover(function(){
+        $(this).addClass('red');
+    }).mouseout(function(){
+        $(this).removeClass('red');
     });
 
 });
