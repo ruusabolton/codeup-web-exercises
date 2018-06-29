@@ -17,7 +17,7 @@ $(document).ready(function() {
     // $(this).css('color', '');
 
 
-    $('.unselected').mouseover(function(){
+    $('.unselected').hover(function(){
         $(this).addClass('red');
     }).mouseout(function(){
         $(this).removeClass('red');
