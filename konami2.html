@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Konami Page2</title>
+    <link rel="stylesheet" href="css/konami.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="topbox" align="center">
+            <!--input for top green box-->
+            <p class="textWrds">
+                <i class="fa fa-cloud" style="font-size:5em;color:lightgrey;text-shadow:8px 8px 16px mediumspringgreen;"></i>
+
+            </p>
+        </div>
+        <div class="orangebox"></div>
+
+
+        <div class="midbox">
+            <!--input for mid grey box-->
+            <div id="cloud1">
+                <i class="fa fa-cloud" style="font-size:3em;color:orange;text-shadow:4px 4px 8px orangered "></i>
+                <i class="fa fa-cloud" style="font-size:5em;color:lavender;text-shadow:2px 2px 4px #000000 "></i>
+                <i class="fa fa-cloud" style="font-size:7em;color:greenyellow; text-shadow:4px 4px 8px cornflowerblue"></i>
+                <!--<i class="fa fa-cloud" style="font-size:3em;color:lightblue;text-shadow:8px 8px 16px purple;"></i>-->
+            </div>
+
+            <div id="cloud2">
+                <i class="fa fa-cloud" style="font-size:7em;color:greenyellow; text-shadow:4px 4px 8px cornflowerblue"></i>
+                <i class="fa fa-cloud" style="font-size:3em;color:orange;text-shadow:4px 4px 8px orangered "></i>
+                <i class="fa fa-cloud" style="font-size:9em;color:lightblue;text-shadow:8px 8px 16px purple;"></i>
+
+            </div>
+
+            <div class="textWrds">
+                The stone that the builder refused
+                <br>
+                <hr>
+                will always be the head cornerstone.
+            </div>
+
+            <ul class="col text-center">
+                <li class="dot-project">
+                    <div class="dot dotblue"><div class=" dot-text">K</div></div>
+                </li>
+                <li class="dot-project">
+                    <div class="dot  dotorange"><div class=" dot-text">O</div></div>
+                </li>
+                <li class="dot-project">
+                    <div class="dot  dotblue"><div class=" dot-text">N</div></div>
+                </li>
+                <li class="dot-project">
+                    <div class="dot  dotorange"><div class=" dot-text">A</div></div>
+                </li>
+                <li class="dot-project">
+                    <div class="dot  dotblue"><div class=" dot-text">M</div></div>
+                </li>
+                <li class="dot-project">
+                    <div class="dot  dotorange"><div class=" dot-text">I</div></div>
+                </li>
+
+
+            </ul>
+        </div>
+
+        <div class="topbox" align="center";>
+            <!--input for green topbox-->
+
+        </div>
+    </div>
+
+
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-2.2.4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+<script>
+    setTimeout(try2, 3000);
+
+
+        function try2() {
+            var confirmed = confirm('Wanna play again?');
+
+            if (confirmed) {
+                document.location = 'konami.html';
+            }
+            else {
+                alert('Thank you for playing.')
+            }
+        }
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,132 @@
+body, html {
+    margin: 0 auto;
+    background-image: url("../img/Konami.png");
+}
+.container-fluid{
+    margin-right: 1%;
+}
+.topbox {
+    background-color: #cbffcd;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    font-family: "Impact";
+    height: 7em;
+    width: 100%;
+}
+.orangebox {
+    background-color: darkorange;
+    height: 6.5em;
+    width: 100%;
+    margin-bottom: 1%;
+    margin-top: 0.5%;
+}
+.midbox {
+    height: 530px;
+    width: 100%;
+    background-color: #E6ECF0;
+
+}
+#lowOrgBx {
+    height: 8em;
+}
+
+
+
+.textWrds {
+    font-size: 50px;
+    text-align: center;
+    font-family: AppleMyungjo;
+}
+d
+.text-center {
+    background-color: #dddddd;
+    font-size: 100px;
+}
+#clm1{
+    height: 200px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #dddddd;
+    font-size: 100px;
+}
+
+#cloud1{
+    float: left;
+    position: relative;
+}
+#cloud2{
+    float: right;
+}
+.fa-cloud{
+    margin-right: 1em;
+    display: inline;
+}
+
+.dot {
+    height: 14em;
+    width: 14em;
+    border-radius: 100%;
+    display: inline-block;
+    text-align: center;
+    border: 5px solid white;
+    color: red;
+    padding-top: 1em;
+}
+
+.dotorange {
+    background-color: #EB9D3A;
+}
+
+.dotblue {
+    background-color: #00ABA9;
+}
+
+.dot-text {
+    /*margin-top: 10%;*/
+    horiz-align: center;
+    font-family: Impact;
+    font-size: 7em;
+}
+.dot-project {
+    display: inline-block;
+    /*color: black;*/
+    text-align: center;
+    font-family: 'Impact', sans-serif;
+    clear: bottom;
+
+}
+#startbtn{
+    margin: 3em;
+    background-color: greenyellow;
+    border: 5px solid green;
+    opacity: 0.5%;
+    text-align: center;
+    height: 3em;
+}
+
+#startOverbtn{
+    margin: 1em;
+    background-color: greenyellow;
+    border: 5px solid green;
+    text-align: center;
+    height: 6em;
+    display: none;
+
+}
+
+.statusAlert{
+    font-size: 50px;
+    color: red;
+}
+
+.success {
+    display:none;
+
+}
+
+ul{
+    top: 200px;
+}
+.pg1{
+    top: 100px;
+}
