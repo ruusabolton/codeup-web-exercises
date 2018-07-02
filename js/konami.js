@@ -43,11 +43,11 @@ document.addEventListener('keydown', function(e) {
     else {
         stepCodePosition = 0;
         //On screen print alert of Failure
-        $(".statusAlert").html("WRONG stone!! Get steppin'!");
+        $(".statusAlert").html("WRONG!!");
         $(".statusAlert, #startOverbtn").css("display", "block");
 
         $("#startOverbtn").click(function() {
-            $(".statusAlert, #startOverbtn").hide();//hide status & button
+            $(".statusAlert, #startOverbtn").hide(); //will hide status & button
         });
 
     }
