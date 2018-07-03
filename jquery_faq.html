@@ -10,6 +10,25 @@
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 
     <style>
+
+        #pic1{
+
+        }
+        #pic1{
+
+
+        }
+        #pic1{
+
+
+        }
+
+        .pict {
+            display: inline-block;
+        }
+
+
+
         .invisible {
             display: none;
         }
@@ -31,7 +50,7 @@
 </head>
 
 <div>
-
+<!--// national parks, Park Name, Park FAQ-->
 
     <div> <h1> National Parks FAQ</h1></div>
     <h1>Parks List</h1>
@@ -68,6 +87,7 @@
     <br>
     <hr>
     <div>
+    <!-- //Park FAQ's; show & hide-->
         <a href="#" id="details"  ><h2>Toggle Here</h2> </a>
 
     </div>
@@ -133,6 +153,17 @@
     </dl>
 
 
+    <div>
+        <!--swap pic frames-->
+        <div id="pic1" class="pict" style="height: 100px; width:100px;background-color: blue;"><span class="tryMe"></span></div>
+        <div id="pic2" class="pict" style="height: 100px; width:100px; background-color: red;" ><span class="tryMe"></span></div>
+        <div id="pic3" class="pict" style="height: 100px; width:100px; background-color: yellow;" ><span class="tryMe"></span></div>
+    </div>
+
+
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-2.2.4.js"></script>
@@ -145,34 +176,43 @@
 
         $(document).ready(function() {
 
+            //UNhide Park FAQs when you click on Toggle Here
             $("#details").click(function() {
                 event.preventDefault();
 
                 $("dd").toggleClass('invisible');
             });
 
+            //changes area btwn <h3> and <br> to bold: ONLY on that section, not everywhere
             $("h3").click(function() {
                 event.preventDefault();
 
-                $(this).nextUntil('br').css('font-weight', 'bold');
+                // $(this).nextUntil('br').css('font-weight', 'bold'); OR
+
+                $(this).next().css('font-weight', 'bold');
+
             });
 
+            //highlights last li element in each ul when you click on button w/ ID of listyellow
             $("#listyellow").click(function(event) {
                 event.preventDefault();
 
                 $('li:last-child').toggleClass('something');
             });
 
-            // $("#listyellow").click(function() {
-            //     event.preventDefault();
-            //
-            //     $('li').toggleClass('something');
-            // });
-
+            //changes first child of ul to blue font
             $("ul").click(function(event) {
 
             $(this).children().first().toggleClass('bluFirst');
             });
+
+            $('.tryMe').click(function (){
+
+                event.preventDefault();
+                $(this).slideToggle();
+
+            });
+
 
         });
 
