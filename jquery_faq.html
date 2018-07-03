@@ -27,10 +27,17 @@
             display: inline-block;
         }
 
-
+        .fadeInvite{
+            display: none;
+        }
 
         .invisible {
             display: none;
+        }
+
+        .faqHide{
+            display: none;
+
         }
 
         .fonty{
@@ -50,6 +57,14 @@
 </head>
 
 <div>
+    <div class="invite">
+        <h1> "Would you like to sign up for our newsletter?"</h1>
+        <span class="xClick">X</span>
+    </div>
+
+
+
+
 <!--// national parks, Park Name, Park FAQ-->
 
     <div> <h1> National Parks FAQ</h1></div>
@@ -60,7 +75,7 @@
     </div>
 
     <h3 >Acadia, Maine</h3>
-    <ul id="acadia">
+    <ul id="acadia" class="faqHide">
         <li class="">Wabanaki ancestral grounds</li>
         <li class="">Park includes mountains, ocean shoreline, woodlands and lakes.</li>
         <li class="">Park has over 40 different species of mammalian wildlife.</li>
@@ -69,7 +84,7 @@
     <br>
 
     <h3 > Bryce Canyon, Utah</h3>
-    <ul id="bryce">
+    <ul id="bryce" class="faqHide" >
         <li class="">Park is not a canyon because it was not formed by erosion.</li>
         <li class="">Paiute Indians ancestral grounds.</li>
         <li class="">USS Bryce Canyon named after the park.</li>
@@ -78,13 +93,17 @@
     <br>
 
     <h3 >Crater Lake, Oregon</h3>
-    <ul id="crater">
+    <ul id="crater" class="faqHide" >
         <li class="">Park is the fifth-oldes national park in the US.</li>
         <li class="">Park's lake is the deepest lake in the US, being 1,949 feet at its deepest point.</li>
         <li class="">Crater formed after the collapse of Mount Mazama.</li>
         <li class="">Park has multiple hiking trails</li>
     </ul>
     <br>
+    <hr>
+    <div class="fadeInvite">
+        <span >Would you like to register?</span>
+    </div>
     <hr>
     <div>
     <!-- //Park FAQ's; show & hide-->
@@ -213,8 +232,24 @@
 
             });
 
+            //when x is clicked, hide entire enclosing div
 
+            $('.xClick').click(function(e){
+                $('.invite').hide();
+            })
+
+            $("h3").click(function() {
+                event.preventDefault();
+
+                $(this).next().slideToggle().ToggleClass('faqHide');
+            });
         });
+
+
+        setTimeout(function(){
+            $('.fadeInvite').fadeIn({duration:5000}).fadeOut({duration:1000});
+        }, 8000);
+
 
     </script>
 </div>
