@@ -40,7 +40,7 @@
         <button a href="#" id="listyellow"  ><h2>Highlight</h2> </button>
     </div>
 
-    <h3 >Acadia. Maine</h3>
+    <h3 >Acadia, Maine</h3>
     <ul id="acadia">
         <li class="">Wabanaki ancestral grounds</li>
         <li class="">Park includes mountains, ocean shoreline, woodlands and lakes.</li>
@@ -157,11 +157,17 @@
                 $(this).nextUntil('br').css('font-weight', 'bold');
             });
 
-            $("#listyellow").click(function() {
+            $("#listyellow").click(function(event) {
                 event.preventDefault();
 
-                $('li').toggleClass('something');
+                $('li:last-child').toggleClass('something');
             });
+
+            // $("#listyellow").click(function() {
+            //     event.preventDefault();
+            //
+            //     $('li').toggleClass('something');
+            // });
 
             $("ul").click(function(event) {
 
