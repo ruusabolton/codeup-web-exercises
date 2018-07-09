@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+<button id="refresh-btn">Refresh</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--<script src="/data/inventory.json"></script>-->
+
+<script>
+(function() {
+    // "use strict";
+    // TODO: Create an ajax GET request for /data/inventory.json
+
+    $.ajax({
+        url: "./data/inventory.json",
+        type: "GET",
+
+    }).done(function(data) {
+        // do something with the data
+        var table;//to hold each object;
+        data.forEach(function(object) {
+            table += '<tr><td>' + object.title + '</td><td>'+ object.quantity + '</td><td>' + object.price + '</td><td>'
+                + object.categories + '</td></tr>';//create array object by heading title in inventory.json
+            console.log(object);
+        $('#insertProducts').html(table);// prints to browser in table body
+
+        })
+    });
+
+
+$('#refresh-btn').click(function(){
+    location.reload();
+})
+
+
+
+
+
+
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+})();
+</script>
+
+</body>
+</html>
