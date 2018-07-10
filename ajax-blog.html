@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+   <style>
+        body{
+            margin: 0 2em;
+            background-color: #d6e5fc;
+            padding-top: 110px;
+        }
+
+        .card-text{
+            margin-left: 2em;
+            margin-right: 2em;
+        }
+        .card-body{
+            background-color: #e3f2fd;
+            border: 2px solid #00ABA9;
+            margin-top: -1em;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar content -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #6797e5; border: 2px solid #00ABA9">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><h1>Ruusa's Blog</h1></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://www.facebook.com">My FaceBook</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://www.linkedin.com">My LinkedIn</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Blog Posts
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">My First Blog</a>
+                            <a class="dropdown-item" href="#">Second Blog</a>
+                            <a class="dropdown-item" href="#">Third Blog</a>
+                            <a class="dropdown-item" href="#">Fourth Blog</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search my blog" aria-label="Search">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+<!--div for json entries-->
+    <div id="posts"></div>
+
+<!--scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <script>
+        (function() {
+            "use strict";
+            $.ajax({
+                url: "./data/blog.json",
+                type: "GET"
+
+            }).done(function (data) {
+                // do something with the data
+                var bloggy = '';//to hold each object;
+                data.forEach(function (entry) {
+                    bloggy += "<div class='card'><div class=' card-header   mb-3 text-center'><a href='#' ><h1>"
+                        + entry.title +"</h1></a></div><br><div class='card-body card-text'><p>"
+                        + entry.content + "<hr>"
+                        + entry.categories +"</div><br><div class='card-footer text-center text-muted'>"
+                        + entry.date +"</p></div></div><br>";
+                    //create array object by heading title in inventory.json
+                    //  console.log(bloggy);
+                    $('#posts').html(bloggy);// prints to browser in div with #posts-ID
+
+                })
+            });
+
+        })();
+    </script>
+
+
+
+
+</body>
+</html>

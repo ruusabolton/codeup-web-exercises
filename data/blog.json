@@ -1,0 +1,46 @@
+[
+    {
+        "title": "My First Blog Post",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "categories": [
+            "greek"
+        ],
+        "date": "January 25, 2015"
+    },
+
+    {
+        "title": "The Second Post",
+        "content": "Cupcake ipsum dolor sit amet gummies. Cake chocolate sweet ice cream oat cake biscuit bear claw dessert. Jujubes marzipan toffee apple pie pastry dragée jujubes marshmallow. Dragée chocolate gingerbread liquorice chocolate bar jujubes. Sweet chocolate bar jelly-o chocolate cake candy carrot cake cotton candy macaroon marzipan. Sweet roll biscuit sweet gummies topping sesame snaps tootsie roll sugar plum pie. Sweet muffin croissant chocolate cake chupa chups. Donut croissant gummies donut powder ice cream. Chupa chups halvah apple pie topping jelly beans donut candy canes donut. Bonbon cake gummi bears cheesecake tart topping powder liquorice gummi bears.",
+        "categories": [
+            "family",
+            "candy",
+            "sweets",
+            "sugar"
+        ],
+        "date": "February 14, 2015"
+    },
+
+    {
+        "title": "The Third Post",
+        "content": "Folks around the Lake Worth area were warned of a zombie outbreak early Sunday morning. The alert, issued at 1:41 a.m., was meant to inform residents about a power outage but had been changed to reference the popular AMC television series The Walking Dead.'Power outage and zombie alert for residents of Lake Worth and Terminus,' the alert said. 'There are now far less than seven thousand three hundred and eighty customers involved due to extreme zombie activity. Restoration time uncertain.' City officials said the alert system was working properly but seemed to have been hacked. They are looking for who is responsible.'We are looking into the reports that the system mentioned zombies. I want to reiterate that Lake Worth does not have any zombie activity currently and apologize for the system message,' wrote Ben Kerr, the city's communication director, on a Facebook post to Lake Worth Live.He reported the power outage only lasted for 27 minutes.",
+        "categories": [
+            "family",
+            "alerts",
+            "zombies",
+            "power"
+        ],
+        "date": "May 22, 2018"
+    },
+
+    {
+        "title": "The Fourth Post",
+        "content": "If you want to build your wealth, making smart investments early on is key. And if you've collected some extra cash, and you don't need to pad your emergency savings account or dig yourself out of debt, it's an ideal time to try your hand at investing. With that in mind, we asked a handful of financial experts to give their suggestions for investing $1,000, a low sum for a veteran investor but a decent amount for beginners.But before you start investing, remember, reaching your finance goals takes time. If you think you might need that $1,000 in a few months, adding more money to your rainy day fund is the best thing you can do. And never invest anything you can't tolerate the thought of possibly losing; after all, investing is a risk. ",
+        "categories": [
+            "invest",
+            "debt",
+            "risk",
+            "money"
+        ],
+        "date": "July 9, 2018"
+    }
+]
