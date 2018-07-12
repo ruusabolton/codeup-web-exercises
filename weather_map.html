@@ -242,7 +242,17 @@
 
         }
 
+        const getMinMaxDayTemp = (data, day) => {
+            const temps = data.list.slice(day * 8 - 8, day * 8)
+                .reduce((prev, curr) => {
+                    prev.push(curr.main.temp);
+                    return prev;
+                }, []).sort();
+            return {min: temps.shift(), max: temps.pop()};
+        };
 
+// example call for fifth day high and low... getMinMaxDayTemp(data, 5)
+// this should return {min: 74.7, max: 97.97} for San Antonio
 
 
     });
