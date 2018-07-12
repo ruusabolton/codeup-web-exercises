@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<style>
+    #map-canvas{
+        height: 600px;
+        margin-top: 2em;
+        border: 1px solid black;
+    }
+    html, body {
+        background-color: #b3d1e5;
+        height: 100%;
+        margin: 0 2em;
+        padding: 0;
+    }
+    #hotCold{
+        margin-top: 20px;
+    }
+    .card{
+        background-color: #e2e2e2;
+        text-align: center;
+        border: 5px solid black;
+    }
+    #error{
+        height: 10px;
+        width: 100px;
+        font-weight: bolder;
+    }
+
+    #castedDays{
+        font-size: 50px;
+    }
+
+
+
+    .controls {
+        background-color: #fff;
+        border-radius: 2px;
+        border: 1px solid transparent;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        /*height: 70px;*/
+        margin-left: 17px;
+        margin-top: 10px;
+        outline: none;
+        padding: 0 11px 0 13px;
+        /*text-overflow: ellipsis;*/
+        width: 400px;
+    }
+
+    .controls:focus {
+        border-color: #4d90fe;
+    }
+    .title {
+        font-weight: bold;
+    }
+    .city {
+        border: 2px solid black;
+        height: 45px;
+
+    }
+
+</style>
+</head>
+<body>
+
+<!--area for weather info-->
+    <div id="hotCold">
+        <h1>Weather Application</h1>
+
+        <div class="container">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+
+                    <input type="text"  id="pac-input" class=" form-control city" placeholder="Enter City Name">
+                </div>
+                <div class="input-group-append">
+                    <button id="submitForecast" type="button" class="btn city">Search City</button>
+                </div>
+            </div>
+            <!--message if no city name is entered-->
+            <span id="error"></span>
+        </div>
+    </div>
+
+<!--area for forecast-->
+    <div id="castedDays"></div>
+    <div  class="card-group">
+        <div id="dayOne" class="card">
+            <div class="card-text"></div>
+
+        </div>
+        <div id="dayTwo" class="card">
+            <div class="card-text"></div>
+        </div>
+        <div id="dayThree" class="card">
+            <div class="card-text"></div>
+        </div>
+    </div>
+
+
+
+<!--area for map-->
+    <div id="map-canvas"></div>
+
+
+<script src="js/jquery-2.2.4.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+        "use strict";
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map-canvas'), {
+                center: {lat: 29.4241, lng: -98.4937},
+                zoom: 13
+            });
+
+            var input = document.getElementById('pac-input');
+
+            var autocomplete = new google.maps.places.Autocomplete(
+                input, {placeIdOnly: true});
+            autocomplete.bindTo('bounds', map);
+
+            //creates searchbox on the map
+            // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+            var infowindow = new google.maps.InfoWindow();
+            var geocoder = new google.maps.Geocoder;
+            var marker = new google.maps.Marker({
+                map: map
+            });
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+
+            autocomplete.addListener('place_changed', function() {
+                infowindow.close();
+                var place = autocomplete.getPlace();
+
+                if (!place.place_id) {
+                    return;
+                }
+                geocoder.geocode({'placeId': place.place_id}, function(results, status) {
+
+                    if (status !== 'OK') {
+                        window.alert('Geocoder failed due to: ' + status);
+                        return;
+                    }
+                    map.setZoom(10);
+                    map.setCenter(results[0].geometry.location);
+                    // Set the position of the marker using the place ID and location.
+                    marker.setPlace({
+                        placeId: place.place_id,
+                        location: results[0].geometry.location
+                    });
+                    marker.setVisible(true);
+                    // infowindowContent.children['place-name'].textContent = place.name;
+
+                });
+            });
+        }
+        initMap();
+
+        $("#submitForecast").click(function(){
+            var city = $("#pac-input").val();
+
+            if(city != ''){
+                $.ajax({
+                    url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=imperial"
+                    + "&APPID=e3e2e2081d752706858fb3a1aff110de",
+                    type: "GET",
+                    dataType: "json",
+                    success: function(data){
+                        var widget = showme(data);
+                        var widget1 = show1(data);
+                        var widget2 = show2(data);
+                        var widget3 = show3(data);
+
+                        $("#castedDays").html(widget);
+                        $("#dayOne").html(widget1);
+                        $("#dayTwo").html(widget2);
+                        $("#dayThree").html(widget3);
+
+
+
+                        $("#pac-input").val('');
+                    }
+                });
+            } else{
+                $("#error").html('Field cannot be empty');
+            }
+        });
+
+        function showme(data){
+            return  data.name + ", " + data.sys.country + " <br>";
+
+        }
+
+        function show1(data){
+            return "<h3 style='font-size: 40px; font-weight: bold;' class='text-center'>Day 1 </h3>" +
+
+                // "<h3><strong>Weather</strong>: " + data.weather[0].main + "</h3>" +
+                "<h3><strong>" + data.main.temp_max + "&deg"+ "/" + data.main.temp_min + "&deg</strong></h3>" +
+                " <div class='text-center'>  <img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'> " + "</div>" +
+                "<h3><strong>" + data.weather[0].main + "</strong>:  " + data.weather[0].description +  "</h3>" +
+                "<h3><strong>Humidity</strong>: " + data.main.humidity + "%</h3>" +
+                "<h3><strong>Wind</strong>: " + data.wind.speed + " m/s</h3>" +
+                "<h3><strong>Pressure</strong>: " + data.main.pressure + "</h3>" ;
+
+        }
+
+        function show2(data){
+            return "<h3 style='font-size: 40px; font-weight: bold;' class='text-center'>Day 2 </h3>" +
+                // "<h3><strong>Weather</strong>: " + data.weather[0].main + "</h3>" +
+                "<h3><strong>" + data.main.temp_max + "&deg"+ "/" + data.main.temp_min + "&deg</strong></h3>" +
+                " <div class='text-center'>  <img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'> " + "</div>" +
+                "<h3><strong>" + data.weather[0].main + "</strong>:  " + data.weather[0].description +  "</h3>" +
+                "<h3><strong>Humidity</strong>: " + data.main.humidity + "%</h3>" +
+                "<h3><strong>Wind</strong>: " + data.wind.speed + " m/s</h3>" +
+                "<h3><strong>Pressure</strong>: " + data.main.pressure + "</h3>" ;
+
+        }
+
+        function show3(data){
+            return "<h3 style='font-size: 40px; font-weight: bold;' class='text-center'>Day 3 </h3>" +
+
+                // "<h3><strong>Weather</strong>: " + data.weather[0].main + "</h3>" +
+                "<h3><strong>" + data.main.temp_max + "&deg"+ "/" + data.main.temp_min + "&deg</strong></h3>" +
+                " <div class='text-center'>  <img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'> " + "</div>" +
+                "<h3><strong>" + data.weather[0].main + "</strong>:  " + data.weather[0].description +  "</h3>" +
+                "<h3><strong>Humidity</strong>: " + data.main.humidity + "%</h3>" +
+                "<h3><strong>Wind</strong>: " + data.wind.speed + " m/s</h3>" +
+                "<h3><strong>Pressure</strong>: " + data.main.pressure + "</h3>" ;
+
+        }
+
+
+
+
+    });
+
+
+
+
+</script>
+
+
+    <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCxIPbNd4ljI6NdSyP5ugk4XoKDzw2VEZM&libraries=places&callback="></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>

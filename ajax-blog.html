@@ -86,10 +86,13 @@
                 // do something with the data
                 var bloggy = '';//to hold each object;
                 data.forEach(function (entry) {
-                    bloggy += "<div class='card'><div class=' card-header   mb-3 text-center'><a href='#' ><h1>"
-                        + entry.title +"</h1></a></div><br><div class='card-body card-text'><p>"
+                    bloggy +=
+                        "<div class='card'><div class=' card-header mb-3 text-center'>" +
+                        "<a href='http://www.google.com' ><h1>"
+                        + entry.title +"</h1></a></div>" +
+                        "<br><div class='card-body card-text'><p>"
                         + entry.content + "<hr>"
-                        + entry.categories +"</div><br><div class='card-footer text-center text-muted'>"
+                        + entry.categories + "</div><br><div class='card-footer text-center text-muted'>"
                         + entry.date +"</p></div></div><br>";
                     //create array object by heading title in inventory.json
                     //  console.log(bloggy);
@@ -100,9 +103,6 @@
 
         })();
     </script>
-
-
-
 
 </body>
 </html>
