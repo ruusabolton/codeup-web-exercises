@@ -41,6 +41,10 @@ const name = 'ruusa';
 const email = 'ruusa@codeup.com';
 const languages = ['html', 'css', 'javascript'];
 
+console.log(name,email, languages); //will print ruusa, ..@codeup.com & langs
+// name = 'ruusa'; will not allow you to re-const.
+////////////////////////////////////////////////////////////
+
 
 // TODO: rewrite the object literal using object property shorthand
 // users.push({
@@ -49,7 +53,9 @@ const languages = ['html', 'css', 'javascript'];
 //     languages: languages
 // });
 
-users.push = {name, email, languages};
+users.push ({name, email, languages});
+console.log(users); //to test whether name,email+lang was added to users array
+//////////////////////////////////////////////////////////////////////////
 
 // TODO: replace `var` with `let` in the following variable declarations
 // var emails = [];
@@ -66,9 +72,17 @@ let names = [];
 //     return names.push(user.name);
 // });
 
-user =>{return emails.push(user.email)};
+users.forEach(user => {
+    return emails.push(user.email);
+});
 
-name=>{return emails.push(user.name)};
+users.forEach(user => {
+    return names.push(user.name);
+});
+
+console.log(emails); //will list all array objects' emails including new addition
+console.log(names);//will list all array objects' names including new addition
+///////////////////////////////////////////////////////////////////////
 
 // TODO: replace `var` with `let` in the following declaration
 // var developers = [];
@@ -83,12 +97,17 @@ users.forEach(function(user) {
 // const email = user.email;
 // const languages = user.languages;
 
-const{name, email, languages} = user;
+    const {name, email, languages} = user; //arrangement of objs  in array will determines the order of print even if you declare const in diff order
+
 // TODO: rewrite the assignment below to use template strings
 // developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
-developers.push(`${name} 's email is ${email} ${name} knows ${languages}.join(', ')`);
 
+    developers.push(`${name} 's email is ${email} ${name} knows ${languages.join(', ')}`);
 });
+
+console.log(developers);//will print each array object inserted in above string
+////////////////////////////////////////////
+
 
 // TODO: Use `let` for the following variable
 // var list = '<ul>';
@@ -96,14 +115,18 @@ let list = '<ul>';
 
 
 // TODO: rewrite the following loop to use a for..of loop
-developers.forEach(function (developer) {
-
-    // TODO: rewrite the assignment below to use template strings
-    list += '<li>' + developer + '</li>';
-});
+// developers.forEach(function (developer) {
+//
+// TODO: rewrite the assignment below to use template strings
+//     list += '<li>' + developer + '</li>';
+// });
 for (developer of developers){
-    list += `<li>${developer}</li>`
+    list += `<li>${developer}</li>`;
+    document.getElementById('printy').innerHTML= list;//print list elements to doc div with id #printy(may need to create it if no HTML doc)
 }
+console.log(developers);//print <ul><li> elements with array objects as list elements
 
 
-list += '</ul>';
+list += '</ul>';//means list ends with </ul>
+
+console.log(list);
