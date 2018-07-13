@@ -58,8 +58,10 @@ console.log(emails); // return just emails of eah user
 // Use .reduce to transform the array into an object where the object's keys are ids and the values are objects
 // that represent each user
 
+//create empty array; ID is the accumulation, user is the array with the users info
 
-const newArr = users.reduce((id, user) => {
-    return id.concat(user);
-    }, []);
-console.log(newArr);
+const newArr = users.reduce((accumulation, user) => {
+    accumulation [user.id]= user; //collect in an array, user id and rest of user info
+    return accumulation //will return each array
+}, {});
+console.log(newArr); //will print one array with nested arrays
