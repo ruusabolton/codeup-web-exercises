@@ -32,3 +32,34 @@ const users = [
         languages: ['html', 'css', 'javascript', 'php'],
     },
 ];
+
+console.log(users);
+///////////////////////////////////////////////////////////////////////////////////
+
+//TO-DO
+//1. Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
+//condition: more than 2 or equal to 3
+//return array with users' langs
+
+const result = users.filter(user => user.languages.length > 2);
+
+console.log('three languages',result); //will return users' info that have 3 langs
+///////////////////////////////////////////////////////////////////////////////////
+
+//TO-DO
+//Use .map to create an array of strings where each element is a user's email address
+
+
+let emails = users.map(user => user.email );
+console.log(emails); // return just emails of eah user
+///////////////////////////////////////////////////////////////////////////////////
+
+//TO-DO
+// Use .reduce to transform the array into an object where the object's keys are ids and the values are objects
+// that represent each user
+
+
+const newArr = users.reduce((id, user) => {
+    return id.concat(user);
+    }, []);
+console.log(newArr);
