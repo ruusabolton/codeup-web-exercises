@@ -24,19 +24,21 @@ const url = `https://api.github.com/users/${username}/events/public`;//URL of GH
 const token = "e2b0f460d867ba93b38a8c4fa575aaff96c7b629";//your GitHub token
 
 //declare a function that
-// 1. fetches the data for a specific username,
-// 2. GH returns data in json format,
+// 1. fetches the data for a specific username using url, username and auth token,
+// 2. GH returns unfiltered data pertaining to username's entire GH profile in json format,
 // 3. rename data to events - filter function so we can reduce it to collect onnly PushEvents,
 // 4. console log the date of latest PushEvent at index position [0], which will be the most current
+// 5. add error-catcher in case something goes wrong with the function execution
 //lastly, call the function, so you can see the data
 
 const getLastEvent = ((username)=> {
     fetch(url, {headers: {"Authorization": `token ${token}`}})
         .then(data => data.json())
         .then(events=>events.filter(event => event.type === "PushEvent"))
-        .then(data => {
-            console.log("Date of last event: " + data[0].created_at)
+        .then(events => {
+            console.log("Date of last event: " + events[0].created_at)
         })
+        .catch(error => console.error("Something went wrong!!  " + error));
 });
 getLastEvent(username);
 
